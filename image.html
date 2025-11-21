@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image_list</title>
+</head>
+<body>
+    <!-- pexels - you can use for images  -->
+     <h1>IMAGES</h1>
+     <p>here are some of the image from my trip </p>
+
+     <!-- image can be from you current directory or can be a remote image -->
+      <p>go to any site - OPEN IMAGE ON NEW TAB - COPY THE URL PASTE IT AN SRC WALA SECTION</p>
+      <h2>REMOTE IMAGE </h2>
+      <img width="300"  src="https://images.pexels.com/photos/2574631/pexels-photo-2574631.jpeg?_gl=1*xpjghz*_ga*MTk0MDM0OTIwNS4xNzYxMDYwNTY3*_ga_8JE65Q40S6*czE3NjEwNjA1NjckbzEkZzEkdDE3NjEwNjA1ODAkajQ3JGwwJGgw" alt="paris street">
+      <img width="300"  src="https://images.pexels.com/photos/1530259/pexels-photo-1530259.jpeg?_gl=1*o6wnef*_ga*MTk0MDM0OTIwNS4xNzYxMDYwNTY3*_ga_8JE65Q40S6*czE3NjEwNjA1NjckbzEkZzEkdDE3NjEwNjA4NTkkajYwJGwwJGgw" alt="image of paris">
+      <H2>image is saved on same folder</H2>
+      <img width="300" src="city.jpeg" alt="city">
+      <!-- city.jpeg - that we saved in that folder -->
+      <p><b>if image is in another folder we have to write its correct path</b></p>
+      <img width="300" src="image/wallpaper.jpg" alt="wallpaper">
+ <p>WE CAN ALSO USS CSS LATER FOR BETTER CONTROL</p>
+      <h1>LISTS</h1>
+      <!-- unordered list -->
+      <ul>
+        <li>apple</li>
+        <li>banana</li>
+        <li>orange</li>
+      </ul>
+      <ol>
+        <li>physics</li>
+        <li>maths</li>
+        <li>chemistry</li>
+      </ol>
+      <h3>description list - term go inside dt and discription will go inside dd</h3>
+      <dt>html</dt>
+      <dd>a markup language for creating web page</dd>
+      <h3>nested list</h3>
+      <ul>
+        <li>fruits
+            <ul>
+                <li>apple</li>
+                <li>banana</li>
+            </ul>
+        </li>
+        <li>veletable</li>
+      </ul>
+      <h1>tables</h1> 
+      <!-- tr - table row
+       td - table data 
+       th- table header -->
+       <table border="4">
+        <tr>
+            <td>sno.
+                <td>items
+                    <td>price
+                        <th>action</th>
+                    </td>
+                </td>
+            </td>
+        </tr>
+        <tr>
+            <td>1
+                <td>apple
+                    <td>2$
+                        <td>delete</td>
+                    </td>
+                </td>
+            </td>
+        </tr>
+        <tr>
+            <td>2
+                <td>orange
+                    <td colspan="2" >3$</td>
+                </td>
+            </td>
+        </tr>
+        <tr>
+            <td>3
+                <td rowspan="2">vegetable
+                    <td>5$</td>
+                </td>
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5
+                <td>fruits </td>
+            </td>
+        </tr>
+       </table>
+       <p>IF YOU WANT 1 CLOUME TAKE SPACE OF 2 USE COLSPAN AND ROW</p>
+       <h1>FORMS</h1>
+
+       <h2>FITNESS FORM</h2>
+       <p>forms allow users to input data and sent it to a server</p>
+       <!-- action - where the data is being submitted --> 
+        <form action="/process.php">
+            <lable for="name">name</lable>
+            <input type="text" id="name" name="name" placeholder="your name here"><br>
+            <lable for="phone">phone no.</lable>
+            <input type="tel" id="phone" name="phone"><br>
+            <lable for="time">preferred time</lable>
+            <input type="time" id="time"><br>
+            <lable for="pass">password</lable>
+            <input type="password" id="pass"><br>
+<!-- id = sonnect <lable> to <input>  name = key used to send data to the server (when form is submitted tab kaisa dikhega ) -->
+    <p>RADIO BUTTONS - ONLY ONE OUT OF MANY OPTION CAN BE SELECTED </p>
+    <P>GENDER </P>
+    <lable type="gender">male</lable>
+    <input type="radio" id="male" name="gender" value="male">
+    <lable type="gender">female</lable>
+    <input type="radio" id="female" name="gender" value="female">
+    <lable type="gender">others</lable>
+    <input type="radio" id="others" name="gender" value="others">
+    <p>CHECKBOX IS USED WHEN USERS CAN SELECT MULTIPLE OPTION</p>
+    <p>choose your hobbies </p>
+    <lable for="playing">playing</lable>
+    <input type="checkbox" name="playing" id ="playing"  value="playing">
+    <lable for="singing">singing</lable>
+    <input type="checkbox" name=singing" id="singing"  value="singing">
+    <p>IF WE WANT CHECKBOX TO BE AAGE OF PLAYING WE WILL HAVE TO PUT INPUT FIRST THAN LABLE</p>
+    <input type="checkbox" name="dancing"  value="dancing">
+    <lable for="dancing">dancing</lable><br>  
+    <label for="city">Choose a city:</label>
+<select id="city" name="city">
+  <option value="delhi">Delhi</option>
+  <option value="mumbai">Mumbai</option>
+  <option value="bangalore">Bangalore</option>
+</select><br>
+<br>
+<textarea name="discription" id="discription" row="40" cols="20" placeholder="add comments "></textarea>    
+    <input type="submit" value="submit">
+        </form>
+    <h1>SEMANTIC TAGS</h1>
+    <p>clearly describe the meaning of the content they contain they help both developer and browser understant the structure of the page</p>
+    <p>div - says nothing about its content<br>
+        header - page or section header
+    </p>
+</body>
+</html>

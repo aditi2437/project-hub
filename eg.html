@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Night-Sky Monitoring — Chhattisgarh</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">NightSky CG</h1>
+      <p class="tag">Monitoring dashboard • Frontend (HTML & CSS)</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Night-Sky Monitoring Dashboard</h2>
+        <p>Find the best observation spots in Chhattisgarh. This frontend demo shows star visibility scores, cloud cover, light pollution, moon phase and suggestion notes — all static (HTML + CSS).</p>
+        <div class="cta-row">
+          <a class="btn" href="#map">View Map</a>
+          <a class="btn ghost" href="#recommendations">Recommendations</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- quick overview cards -->
+        <div class="overview-grid">
+          <div class="overview-card">
+            <h3>Best Tonight</h3>
+            <p class="big">Jagdalpur</p>
+          </div>
+          <div class="overview-card">
+            <h3>Clear Skies</h3>
+            <p class="big">Ambikapur</p>
+          </div>
+          <div class="overview-card">
+            <h3>Lowest Light</h3>
+            <p class="big">Kanker</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main layout -->
+    <section class="dashboard">
+      <!-- LEFT: Map + locations -->
+      <aside class="map-panel" id="map">
+        <h3>Locations (click to view)</h3>
+
+        <!-- CSS-only radio location switcher -->
+        <div class="locations">
+          <input type="radio" name="loc" id="loc-raipur" checked>
+          <label for="loc-raipur" class="loc-label">Raipur</label>
+
+          <input type="radio" name="loc" id="loc-bilaspur">
+          <label for="loc-bilaspur" class="loc-label">Bilaspur</label>
+
+          <input type="radio" name="loc" id="loc-jagdalpur">
+          <label for="loc-jagdalpur" class="loc-label">Jagdalpur</label>
+
+          <input type="radio" name="loc" id="loc-ambikapur">
+          <label for="loc-ambikapur" class="loc-label">Ambikapur</label>
+        </div>
+
+        <!-- Static map visual (placeholder) -->
+        <div class="map">
+          <!-- you can replace with real map image in assets -->
+          <svg viewBox="0 0 600 300" preserveAspectRatio="xMidYMid meet" class="map-svg" aria-hidden="true">
+            <rect width="100%" height="100%" rx="12" fill="#0b1220"/>
+            <g fill="#1f2a40" opacity="0.8">
+              <circle cx="100" cy="80" r="40"/>
+              <circle cx="260" cy="150" r="28"/>
+              <circle cx="420" cy="90" r="36"/>
+              <circle cx="520" cy="200" r="24"/>
+            </g>
+            <!-- pins (static) -->
+            <g class="pin pin-raipur"><circle cx="100" cy="80" r="6" fill="#ffd166"/></g>
+            <g class="pin pin-bilaspur"><circle cx="260" cy="150" r="6" fill="#ffd166"/></g>
+            <g class="pin pin-jagdalpur"><circle cx="420" cy="90" r="6" fill="#ffd166"/></g>
+            <g class="pin pin-ambikapur"><circle cx="520" cy="200" r="6" fill="#ffd166"/></g>
+          </svg>
+        </div>
+
+        <p class="note">Note: map is a static placeholder. Replace with an image or embed if needed.</p>
+      </aside>
+
+      <!-- RIGHT: metrics & recommendations -->
+      <section class="metrics-panel">
+        <!-- Raipur -->
+        <article class="site-card s-raipur">
+          <h3>Raipur</h3>
+          <div class="metrics-grid">
+            <div class="metric">
+              <span class="label">Star Visibility</span>
+              <span class="value">6 / 10</span>
+            </div>
+            <div class="metric">
+              <span class="label">Cloud Cover</span>
+              <span class="value">35%</span>
+            </div>
+            <div class="metric">
+              <span class="label">Light Pollution</span>
+              <span class="value">Moderate</span>
+            </div>
+            <div class="metric">
+              <span class="label">Moon Phase</span>
+              <span class="value">Waxing Gibbous</span>
+            </div>
+            <div class="metric">
+              <span class="label">Temperature</span>
+              <span class="value">22°C</span>
+            </div>
+            <div class="metric">
+              <span class="label">Best Time</span>
+              <span class="value">22:00 — 00:30</span>
+            </div>
+          </div>
+          <div class="rating">Site Rating: <span class="score">3.5</span> / 5</div>
+        </article>
+
+        <!-- Bilaspur -->
+        <article class="site-card s-bilaspur">
+          <h3>Bilaspur</h3>
+          <div class="metrics-grid">
+            <div class="metric">
+              <span class="label">Star Visibility</span>
+              <span class="value">7 / 10</span>
+            </div>
+            <div class="metric">
+              <span class="label">Cloud Cover</span>
+              <span class="value">22%</span>
+            </div>
+            <div class="metric">
+              <span class="label">Light Pollution</span>
+              <span class="value">Low</span>
+            </div>
+            <div class="metric">
+              <span class="label">Moon Phase</span>
+              <span class="value">First Quarter</span>
+            </div>
+            <div class="metric">
+              <span class="label">Temperature</span>
+              <span class="value">20°C</span>
+            </div>
+            <div class="metric">
+              <span class="label">Best Time</span>
+              <span class="value">21:00 — 23:30</span>
+            </div>
+          </div>
+          <div class="rating">Site Rating: <span class="score">4.0</span> / 5</div>
+        </article>
+
+        <!-- Jagdalpur -->
+        <article class="site-card s-jagdalpur">
+          <h3>Jagdalpur</h3>
+          <div class="metrics-grid">
+            <div class="metric">
+              <span class="label">Star Visibility</span>
+              <span class="value">9 / 10</span>
+            </div>
+            <div class="metric">
+              <span class="label">Cloud Cover</span>
+              <span class="value">8%</span>
+            </div>
+            <div class="metric">
+              <span class="label">Light Pollution</span>
+              <span class="value">Very Low</span>
+            </div>
+            <div class="metric">
+              <span class="label">Moon Phase</span>
+              <span class="value">New Moon</span>
+            </div>
+            <div class="metric">
+              <span class="label">Temperature</span>
+              <span class="value">18°C</span>
+            </div>
+            <div class="metric">
+              <span class="label">Best Time</span>
+              <span class="value">00:00 — 03:00</span>
+            </div>
+          </div>
+          <div class="rating">Site Rating: <span class="score">4.6</span> / 5</div>
+        </article>
+
+        <!-- Ambikapur -->
+        <article class="site-card s-ambikapur">
+          <h3>Ambikapur</h3>
+          <div class="metrics-grid">
+            <div class="metric">
+              <span class="label">Star Visibility</span>
+              <span class="value">8 / 10</span>
+            </div>
+            <div class="metric">
+              <span class="label">Cloud Cover</span>
+              <span class="value">12%</span>
+            </div>
+            <div class="metric">
+              <span class="label">Light Pollution</span>
+              <span class="value">Low</span>
+            </div>
+            <div class="metric">
+              <span class="label">Moon Phase</span>
+              <span class="value">Waning Crescent</span>
+            </div>
+            <div class="metric">
+              <span class="label">Temperature</span>
+              <span class="value">19°C</span>
+            </div>
+            <div class="metric">
+              <span class="label">Best Time</span>
+              <span class="value">23:00 — 02:00</span>
+            </div>
+          </div>
+          <div class="rating">Site Rating: <span class="score">4.2</span> / 5</div>
+        </article>
+
+        <!-- CSS-only logic: show/hide site-cards based on radio -->
+        <div class="recommendations" id="recommendations">
+          <h3>Daily Recommendations</h3>
+          <div class="rec-grid">
+            <div class="rec">
+              <h4>Tonight's Top Pick</h4>
+              <p><strong>Jagdalpur</strong> — New Moon & very low light pollution. Bring small red torch & warm layers.</p>
+            </div>
+            <div class="rec">
+              <h4>Observation Tips</h4>
+              <ul>
+                <li>Avoid using white light on site.</li>
+                <li>Check horizon for local obstructions.</li>
+                <li>Use star charts or an app if available.</li>
+              </ul>
+            </div>
+            <div class="rec">
+              <h4>Safety</h4>
+              <p>Inform someone about your location; carry water, phone, and first aid.</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built for <strong>Hack the Cosmos</strong> • Frontend (Low-Code) • © 2025</p>
+    </div>
+  </footer>
+
+</body>
+</html>
